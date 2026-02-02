@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _rb.AddForce(new Vector2(0, jumpForce - jumpForce / 2.5f));
     }
 
     void OnJump()
