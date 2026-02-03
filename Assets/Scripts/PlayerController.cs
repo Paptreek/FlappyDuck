@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce;
     public int points;
+    public bool isDead;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pillar") || collision.gameObject.CompareTag("Wall"))
         {
+            isDead = true;
             Destroy(gameObject);
         }
     }
