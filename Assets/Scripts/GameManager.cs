@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,7 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject obstacle;
 
     public TMP_Text scoreText;
-    public TMP_Text gameOverText;
+    public GameObject gameOverText;
+    public Button playAgainButton;
 
     void Update()
     {
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
         else
         {
             gameOverText.gameObject.SetActive(true);
+            playAgainButton.gameObject.SetActive(true);
         }
     }
 }
