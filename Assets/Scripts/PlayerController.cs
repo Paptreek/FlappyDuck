@@ -1,15 +1,12 @@
 using UnityEngine;
 
-// 1. Gain points whenever player passes a pillar. (Prob make a GameManager script for this)
-
-[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D _rb;
 
+    public GameObject quackSound;
     public float jumpForce;
     public int points;
-    public bool isDead;
 
     void Start()
     {
@@ -26,7 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pillar") || collision.gameObject.CompareTag("Wall"))
         {
-            isDead = true;
+            quackSound.gameObject.SetActive(true);
             Destroy(gameObject);
         }
     }
@@ -35,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Points"))
         {
+            GetComponent<AudioSource>().Play();
             points += 1;
         }
     }
