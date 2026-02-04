@@ -18,15 +18,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame && _paused == false)
-        {
-            PauseGame();
-        }
-        else if (Keyboard.current.escapeKey.wasPressedThisFrame && _paused == true)
-        {
-            ResumeGame();
-        }
-
         if (Keyboard.current.mKey.wasPressedThisFrame)
         {
             ToggleMute();
@@ -35,6 +26,15 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             scoreText.SetText(player.GetComponent<PlayerController>().points.ToString());
+
+            if (Keyboard.current.escapeKey.wasPressedThisFrame && _paused == false)
+            {
+                PauseGame();
+            }
+            else if (Keyboard.current.escapeKey.wasPressedThisFrame && _paused == true)
+            {
+                ResumeGame();
+            }
         }
         else
         {
