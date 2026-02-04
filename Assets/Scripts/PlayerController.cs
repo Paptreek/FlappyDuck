@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public GameObject quackSound;
     public float jumpForce;
     public int points;
+    public bool canJump = true;
 
     void Start()
     {
@@ -16,7 +18,10 @@ public class PlayerController : MonoBehaviour
 
     void OnJump()
     {
-        _rb.AddForce(new Vector2(0, jumpForce));
+        if (canJump)
+        {
+            _rb.AddForce(new Vector2(0, jumpForce));
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

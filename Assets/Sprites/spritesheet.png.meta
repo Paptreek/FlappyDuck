@@ -134,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet 2_0
+      name: duck
       rect:
         serializedVersion: 2
         x: 10
@@ -156,7 +156,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_1
+      name: duck flapping
       rect:
         serializedVersion: 2
         x: 160
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_2
+      name: column top
       rect:
         serializedVersion: 2
         x: 500
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_3
+      name: column bottom
       rect:
         serializedVersion: 2
         x: 750
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_4
+      name: cloud medium
       rect:
         serializedVersion: 2
         x: 10
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_5
+      name: cloud small
       rect:
         serializedVersion: 2
         x: 330
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_6
+      name: cloud large
       rect:
         serializedVersion: 2
         x: 10
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_7
+      name: cloud medium 2
       rect:
         serializedVersion: 2
         x: 10
@@ -310,7 +310,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet 2_8
+      name: button background
       rect:
         serializedVersion: 2
         x: 10
@@ -331,6 +331,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: pause white
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 340
+        width: 100
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675c1e669fb41254482cad8a658a8804
+      internalID: 914013957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause gray
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 340
+        width: 100
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd70272ab3193a40b142bc123caa342
+      internalID: -438732618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause green
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 340
+        width: 100
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec3fca5549534945a6afaae57d94080
+      internalID: 2001512759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause dark green
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 180
+        width: 100
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b67a88fdbd8ee940ab7fd97f283ba16
+      internalID: 693954283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -345,17 +433,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      spritesheet 2_0: -9055564546187535322
-      spritesheet 2_1: -4202189520101060383
-      spritesheet 2_2: 3934147057263141665
-      spritesheet 2_3: -2101311314152513305
-      spritesheet 2_4: 7730425415541516597
-      spritesheet 2_5: -3294735497148670117
-      spritesheet 2_6: 749279503479697568
-      spritesheet 2_7: 8239245520584659199
-      spritesheet 2_8: 603995131
+      button background: 603995131
+      cloud large: 749279503479697568
+      cloud medium: 7730425415541516597
+      cloud medium 2: 8239245520584659199
+      cloud small: -3294735497148670117
+      column bottom: -2101311314152513305
+      column top: 3934147057263141665
+      duck: -9055564546187535322
+      duck flapping: -4202189520101060383
+      pause dark green: 693954283
+      pause gray: -438732618
+      pause green: 2001512759
+      pause white: 914013957
+      spritesheet_3: -206598397
+      spritesheet_5: -281502324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
