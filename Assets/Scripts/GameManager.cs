@@ -14,15 +14,9 @@ public class GameManager : MonoBehaviour
     public Button playAgainButton;
 
     private bool _paused;
-    private bool _muted;
 
     void Update()
     {
-        if (Keyboard.current.mKey.wasPressedThisFrame)
-        {
-            ToggleMute();
-        }
-
         if (player != null)
         {
             scoreText.SetText(player.GetComponent<PlayerController>().points.ToString());
@@ -59,19 +53,5 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
         _paused = false;
-    }
-
-    private void ToggleMute()
-    {
-        if (!_muted)
-        {
-            AudioListener.volume = 0;
-            _muted = true;
-        }
-        else
-        {
-            AudioListener.volume = 1;
-            _muted = false;
-        }
     }
 }
