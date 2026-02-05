@@ -8,18 +8,27 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject obstacle;
 
-    public TMP_Text scoreText;
-    public GameObject gameOverText;
+    public GameObject gameOverPanel;
     public GameObject pausedText;
-    public Button playAgainButton;
+    public TMP_Text _scoreText;
+    public TMP_Text _highScoreText;
 
+    private int _currentScore;
+    private int _highScore;
     private bool _paused;
 
     void Update()
     {
         if (player != null)
         {
-            scoreText.SetText(player.GetComponent<PlayerController>().points.ToString());
+            _currentScore = player.GetComponent<PlayerController>().points;
+            _scoreText.SetText(_currentScore.ToString());
+
+            if (_currentScore > _highScore)
+            {
+                SetHighScore("HighScore", _currentScore);
+                //_highScore = _currentScore;
+            }
 
             if (Keyboard.current.escapeKey.wasPressedThisFrame && _paused == false)
             {
@@ -32,8 +41,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            gameOverText.gameObject.SetActive(true);
-            playAgainButton.gameObject.SetActive(true);
+            _highScoreText.SetText(GetHighScore("HighScore").ToString());
+            gameOverPanel.gameObject.SetActive(true);
         }
     }
 
@@ -53,5 +62,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
         _paused = false;
+    }
+
+    private void SetHighScore(string KeyName, int Value)
+    {
+        PlayerPrefs.SetInt(KeyName, Value);
+    }
+
+    private int GetHighScore(string KeyName)
+    {
+        return PlayerPrefs.GetInt(KeyName);
     }
 }
