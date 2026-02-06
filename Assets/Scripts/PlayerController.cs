@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canJump)
         {
-            _rb.AddForce(new Vector2(0, jumpForce));
+            _rb.linearVelocityY = 8.5f;
         }
     }
 
