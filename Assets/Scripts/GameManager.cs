@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
             _currentScore = player.GetComponent<PlayerController>().points;
             _scoreText.SetText(_currentScore.ToString());
 
-            if (_currentScore > _highScore)
+            if (_currentScore > GetHighScore("HighScore"))
             {
                 SetHighScore("HighScore", _currentScore);
                 //_highScore = _currentScore;
