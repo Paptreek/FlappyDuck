@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +9,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverPanel;
     public GameObject pausedText;
-    public TMP_Text _scoreText;
-    public TMP_Text _highScoreText;
+    public TMP_Text scoreText;
+    public TMP_Text highScoreText;
 
     private int _currentScore;
-    private int _highScore;
     private bool _paused;
 
     void Update()
@@ -22,12 +20,11 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             _currentScore = player.GetComponent<PlayerController>().points;
-            _scoreText.SetText(_currentScore.ToString());
+            scoreText.SetText(_currentScore.ToString());
 
             if (_currentScore > GetHighScore("HighScore"))
             {
                 SetHighScore("HighScore", _currentScore);
-                //_highScore = _currentScore;
             }
 
             if (Keyboard.current.escapeKey.wasPressedThisFrame && _paused == false)
@@ -41,7 +38,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            _highScoreText.SetText(GetHighScore("HighScore").ToString());
+            highScoreText.SetText(GetHighScore("HighScore").ToString());
             gameOverPanel.gameObject.SetActive(true);
         }
     }
