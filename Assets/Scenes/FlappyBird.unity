@@ -369,8 +369,8 @@ MonoBehaviour:
   obstacle: {fileID: 1148516521977534521, guid: 68c269cb24f4f6a4e84c78d98f3d03d2, type: 3}
   gameOverPanel: {fileID: 1748297696}
   pausedText: {fileID: 1579000111}
-  _scoreText: {fileID: 2022041525}
-  _highScoreText: {fileID: 89312123}
+  scoreText: {fileID: 2022041525}
+  highScoreText: {fileID: 89312123}
 --- !u!4 &77894086
 Transform:
   m_ObjectHideFlags: 0
